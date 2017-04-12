@@ -48,7 +48,6 @@ const download = r => require.ensure([], () => r(require('../page/download/downl
 
 
 
-
 export default [{
     path: '/',
     component: App, //顶层路由，对应index.html
@@ -142,25 +141,23 @@ export default [{
                 component: info,
                 children: [{
                     path: 'address',
-                    component: address,     //编辑地址
-                    children:[{
-                        path:'add',
-                        component:add,
-                        children:[{
-                            path:'addDetail',
-                            component:addDetail
+                    component: address, //编辑地址
+                    children: [{
+                        path: 'add',
+                        component: add,
+                        children: [{
+                            path: 'addDetail',
+                            component: addDetail
                         }]
                     }]
                 }]
-            },
-            {
+            }, {
                 path: 'setusername',
                 component: setusername,
-            },
-            {
+            }, {
                 path: 'service', //服务中心
                 component: service,
-            },]
+            }, ]
         },
         //修改密码页 
         {
@@ -189,7 +186,7 @@ export default [{
             }, {
                 path: 'vipDescription', //会员说明
                 component: vipDescription,
-            },]
+            }, ]
         },
         //发现页
         {
@@ -205,14 +202,14 @@ export default [{
         {
             path: '/service',
             component: service,
-             children: [{
+            children: [{
                 path: 'questionDetail', //订单详情页
                 component: questionDetail,
             }, ]
         },
         //余额
         {
-            path: 'balance', 
+            path: 'balance',
             component: balance,
             children: [{
                 path: 'detail', //余额说明
@@ -221,7 +218,7 @@ export default [{
         },
         //我的优惠页 
         {
-            path: 'benefit', 
+            path: 'benefit',
             component: benefit,
             children: [{
                 path: 'coupon', //代金券说明
@@ -238,11 +235,11 @@ export default [{
             }, {
                 path: 'commend', //推荐有奖
                 component: commend,
-            },]
+            }, ]
         },
         //我的积分页
         {
-            path: 'points', 
+            path: 'points',
             component: points,
             children: [{
                 path: 'detail', //积分说明
